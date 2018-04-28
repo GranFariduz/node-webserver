@@ -9,12 +9,12 @@ app.set('view engine', 'hbs');
 
 //didn't call next(), the code won't move another inch from this function
 //keep this commented out until you want to enter maintenance mode
-app.use((req, res, next) => {
-    res.render('maintenance.hbs', {
-        main_message: 'Under maintenance, come back later.'
-    });
-    next();
-})
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs', {
+//         main_message: 'Under maintenance, come back later.'
+//     });
+//     next();
+// })
 
 //called after the maintenance.hbs file, be careful for the order.
 app.use(express.static(__dirname + '/public')); //works without engine, used to set a directory with pages to display
